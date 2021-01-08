@@ -1,0 +1,19 @@
+﻿@page
+@model WebRazor2.Pages.StudentPages.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Student.Name"></label>
+        <input asp-for="@Model.Student.Name" placeholder="Name">
+        <span asp-validation-for="@Model.Student.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Student.SurName"></label>
+        <input asp-for="@Model.Student.SurName" placeholder="SurName">
+        <span asp-validation-for="@Model.Student.SurName" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
